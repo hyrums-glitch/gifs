@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Golfsheds Email Signature Setup</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#AC9561;--gold-d:#AC9561;--ink:#111;--cream:#FAF7F0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);font-family:Montserrat,Arial,sans-serif;color:var(--ink)}
+header{background:#0E0E0E;color:var(--gold);padding:22px 24px;border-bottom:3px solid var(--gold);text-align:center}
+header h1{margin:0;font-size:20px;letter-spacing:4px;text-transform:uppercase;font-weight:600}
+header p{margin:6px 0 0;color:#cfc6b2;font-size:13px;letter-spacing:.5px}
+main{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+.card{background:#fff;border:1px solid #e7dfcd;border-radius:14px;padding:22px;margin-bottom:22px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.step{display:inline-block;background:var(--gold);color:#111;font-weight:700;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-size:13px;margin-right:8px}
+h2{font-size:16px;margin:0 0 16px;display:flex;align-items:center}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#6b6b6b;margin-bottom:5px}
+input{width:100%;padding:11px 12px;font:15px Arial,sans-serif;border:1px solid #d9cfb8;border-radius:8px;margin-bottom:14px;background:#fffdf8}
+input:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.preview{overflow-x:auto;padding:18px;border:1px dashed #d9cfb8;border-radius:10px;background:#fff}
+.note{font-size:12px;color:#8a8170;margin:10px 0 0}
+button{background:#0E0E0E;color:var(--gold);border:2px solid var(--gold);border-radius:10px;padding:14px 22px;font:700 14px Montserrat,Arial;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;margin-top:16px}
+button:hover{background:#1c1c1c}
+button.ok{background:var(--gold);color:#111}
+#msg{text-align:center;font-size:13px;margin-top:10px;min-height:18px;color:#3b7a3b;font-weight:600}
+ol{margin:0;padding-left:20px;line-height:1.75;font-size:14px}
+ol li{margin-bottom:6px}
+a{color:#1155CC}
+code{background:#f4efe3;padding:2px 6px;border-radius:4px;font-size:13px}
+.linkbox{display:flex;gap:8px;align-items:center;margin:6px 0 2px}
+.linkbox span{flex:1;font:13px monospace;background:#f4efe3;padding:8px 10px;border-radius:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.linkbox button{width:auto;margin:0;padding:8px 12px;font-size:11px;letter-spacing:1px}
+.tip{font-size:13px;color:#555;line-height:1.6}
+.tip b{color:#111}
+</style></head>
+<body>
+<header><h1>Golfsheds Email Signature</h1><p>About 2 minutes. Do this on a computer, not your phone.</p></header>
+<main>
+
+<div class="card">
+  <h2><span class="step">1</span>Enter your info</h2>
+  <div class="row">
+    <div><label for="n">Full name</label><input id="n" placeholder="Full Name" autocomplete="name"></div>
+    <div><label for="t">Title</label><input id="t" placeholder="YOUR JOB TITLE"></div>
+  </div>
+  <label for="p">Phone <span style="text-transform:none;letter-spacing:0;font-weight:500;color:#999">10 digits, shown as 555.555.5555</span></label><input id="p" placeholder="555.555.5555" inputmode="tel">
+  <label style="margin-top:4px">Preview</label>
+  <div class="preview" id="pv"></div>
+  
+</div>
+
+<div class="card">
+  <h2><span class="step">2</span>Copy your signature</h2>
+  <button id="copy">Copy Signature</button>
+  <div id="msg"></div>
+</div>
+
+<div class="card">
+  <h2><span class="step">3</span>Paste it into Gmail</h2>
+  <ol>
+    <li>Open Gmail signature settings (opens in a new tab):
+      <div class="linkbox"><span>https://mail.google.com/mail/u/0/#settings/general</span><button data-copy="https://mail.google.com/mail/u/0/#settings/general">Copy link</button></div>
+      <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank" rel="noopener">Open Gmail Settings &rarr;</a>
+    </li>
+    <li>Scroll down to <b>Signature</b> and click <b>+ Create new</b>. Name it <code>Golfsheds</code>.</li>
+    <li>Click in the big signature box and paste: <code>Cmd + V</code> on Mac, <code>Ctrl + V</code> on PC.</li>
+    <li>Under <b>Signature defaults</b>, set both <b>For new emails use</b> and <b>On reply/forward use</b> to <code>Golfsheds</code>.</li>
+    <li>Check <b>"Insert signature before quoted text in replies…"</b> so it shows on replies.</li>
+    <li>Scroll all the way down and click <b>Save Changes</b>.</li>
+    <li>Send a test email to yourself to check it.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h2><span class="step">?</span>If something looks off</h2>
+  <div class="tip">
+    <p><b>Images show as broken boxes or are missing:</b> refresh Gmail. If they're still missing, delete the signature, come back here, click Copy again, and repaste. Don't copy from an old email.</p>
+    <p><b>Logo lands above the text instead of beside it:</b> delete everything in the signature box, click in the empty box, and paste again. Don't paste into a box that still has an old signature in it. If it still stacks, tell Hyrum which browser you used.</p>
+    <p><b>Signature shows as plain text with no images:</b> in a new email, click the <b>&#8942;</b> menu (bottom right) and turn off <b>Plain text mode</b>.</p>
+    <p><b>Copy button didn't work:</b> use Chrome on a computer and try again. Don't copy the preview by hand, because those images won't carry over into Gmail.</p>
+    <p><b>Gmail phone app:</b> the phone app uses its own text-only signature. Set it in the app under Settings &rarr; your account &rarr; <b>Signature settings</b>, using: <code>Your Name | Golfsheds | golfsheds.com</code></p>
+  </div>
+</div>
+
+</main>
+<script>
+const LIVE={logo:"https://raw.githubusercontent.com/hyrums-glitch/gifs/main/golfsheds-logo-flip-600.gif",phone:"https://raw.githubusercontent.com/hyrums-glitch/gifs/main/icons-02.png",web:"https://raw.githubusercontent.com/hyrums-glitch/gifs/main/icons-01.png"};
+const PREV=LIVE;
+const $=id=>document.getElementById(id);
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function phoneParts(raw){
+  let d=raw.replace(/\D/g,''); if(d.length===11&&d[0]==='1') d=d.slice(1);
+  if(d.length===10) return {txt:d.slice(0,3)+'.'+d.slice(3,6)+'.'+d.slice(6),tel:'+1'+d};
+  return {txt:raw.trim(),tel:raw.replace(/[^\d+]/g,'')};
+}
+function sig(img){
+  const name=esc(($('n').value.trim()||'Full Name').toUpperCase());
+  const title=esc($('t').value.trim()||'YOUR JOB TITLE').replace(/\s*\|\s*/g,'&nbsp;|&nbsp;');
+  const ph=phoneParts($('p').value||'555.555.5555');
+  const W='https://www.golfsheds.com', G='#AC9561', K='#000000';
+  const H="'Bebas Neue Pro','Bebas Neue',Roboto,Arial,Helvetica,sans-serif", B="Roboto,Arial,Helvetica,sans-serif";
+  return [
+'<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:'+B+';">',
+'<tbody><tr>',
+'<td width="90" valign="middle" style="width:90px;padding:0 6px 0 0;vertical-align:middle;">',
+`<a href="${W}" target="_blank" style="text-decoration:none;"><img src="${img.logo}" alt="GOLFSHEDS" width="84" height="84" style="display:block;width:84px;height:84px;border:0;"></a>`,
+'</td>',
+`<td valign="middle" align="left" style="vertical-align:middle;text-align:left;border-left:3px solid ${G};padding:4px 0 4px 18px;">`,
+`<p style="margin:0;font-family:${H};font-size:22px;line-height:27px;font-weight:bold;color:${K};letter-spacing:1px;text-transform:uppercase;text-align:left;">${name}</p>`,
+`<p style="margin:1px 0 0 0;font-family:${H};font-size:13px;line-height:19px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;text-align:left;white-space:nowrap;"><span style="color:${G};">${title}</span><span style="color:${G};">&nbsp;|&nbsp;</span><span style="color:${G};">GOLFSHEDS</span></p>`,
+`<p style="margin:7px 0 0 0;font-family:${B};font-size:11.4px;line-height:20px;text-align:left;white-space:nowrap;">`,
+`<a href="tel:${ph.tel}" style="text-decoration:none;"><img src="${img.phone}" alt="Phone" width="20" height="20" style="width:20px;height:20px;border:0;vertical-align:middle;"></a>&nbsp;`,
+`<a href="tel:${ph.tel}" style="color:#515151;text-decoration:underline;vertical-align:middle;">${esc(ph.txt)}</a>`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`<a href="${W}" target="_blank" style="text-decoration:none;"><img src="${img.web}" alt="Website" width="20" height="20" style="width:20px;height:20px;border:0;vertical-align:middle;"></a>&nbsp;`,
+`<a href="${W}" target="_blank" style="color:#515151;text-decoration:underline;vertical-align:middle;">GOLFSHEDS.COM</a>`,
+'</p>',
+'</td>',
+'</tr></tbody></table>'].join('');
+}
+function render(){$('pv').innerHTML=sig(PREV)}
+['n','t','p'].forEach(id=>$(id).addEventListener('input',render));
+render();
+function flash(btn,txt,okMsg){const o=btn.textContent;btn.textContent=txt;btn.classList.add('ok');setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1800);if(okMsg!==undefined)$('msg').textContent=okMsg}
+function copyRich(html,plain){
+  const pv=$('pv'); pv.innerHTML=html;
+  const sel=window.getSelection(); sel.removeAllRanges();
+  const r=document.createRange(); r.selectNode(pv.querySelector('table')); sel.addRange(r);
+  let ok=false; try{ok=document.execCommand('copy')}catch(e){}
+  sel.removeAllRanges(); render();
+  if(ok) return Promise.resolve();
+  return navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
+}
+$('copy').addEventListener('click',e=>{
+  if(!$('n').value.trim()||!$('t').value.trim()||!/^\d{3}\.\d{3}\.\d{4}$/.test(phoneParts($('p').value).txt)){ $('msg').style.color='#a33'; $('msg').textContent='Fill in your name, title, and a 10-digit phone number (555.555.5555).'; return; }
+  $('msg').style.color='#3b7a3b';
+  const ph=phoneParts($('p').value);
+  const plain=`${$('n').value.trim()}\n${$('t').value.trim()}\n${ph.txt} | GOLFSHEDS.COM`;
+  copyRich(sig(LIVE),plain).then(()=>flash(e.target,'Copied ✓','Copied. Now do Step 3 and paste it into Gmail.'))
+   .catch(()=>{ $('msg').style.color='#a33'; $('msg').textContent='Copy was blocked by your browser. Try again in Chrome on a computer.'; });
+});
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{
+  const v=b.dataset.copy; const h=e=>{e.clipboardData.setData('text/plain',v);e.preventDefault()};
+  document.addEventListener('copy',h); try{document.execCommand('copy')}catch(e){} document.removeEventListener('copy',h);
+  flash(b,'Copied');
+}));
+</script>
+</body></html>
